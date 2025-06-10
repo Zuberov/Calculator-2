@@ -695,6 +695,7 @@ function generateQuote() {
 }
 
 function createQuoteContent() {
+  const quoteNumber = document.getElementById('quoteNumber').value;
   const clientName = document.getElementById('clientName').value;
   const greeting = document.getElementById('quoteGreeting').value.replace('[Client Name]', clientName);
   
@@ -709,8 +710,8 @@ function createQuoteContent() {
       </div>
     </div>
     
-    <h1 class="quote-title">Project Quote</h1>
-    ${quoteNumber ? `<div class="quote-number"><strong>Quote Number:</strong> ${quoteNumber}</div>` : ''}
+    <h1 class="quote-title">Design Services Quote</h1>
+     ${quoteNumber ? `<div class="quote-number"><strong>Quote Number:</strong> ${quoteNumber}</div>` : ''}` : ''}
     
     <div class="quote-section">
       <h3>Client Information</h3>
