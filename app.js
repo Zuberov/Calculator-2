@@ -700,7 +700,6 @@ function createQuoteContent() {
   const greeting = document.getElementById('quoteGreeting').value.replace('[Client Name]', clientName);
   
   let content = `
-    const quoteNumber = document.getElementById('quoteNumber').value;
     <div class="quote-header">
       ${currentState.logoUrl ? `<img src="${currentState.logoUrl}" alt="Logo" class="quote-logo">` : '<div></div>'}
       <div class="quote-contact">
