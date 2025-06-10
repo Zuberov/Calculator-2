@@ -557,7 +557,7 @@ function addCustomService() {
   const standardRate = parseFloat(document.getElementById('customServiceStandard').value) || 0;
   const premiumRate = parseFloat(document.getElementById('customServicePremium').value) || 0;
 
-  if (!name || !description || simpleRate <= 0 || standardRate <= 0 || premiumRate <= 0) {
+  if (!name || !description || basicRate <= 0 || standardRate <= 0 || premiumRate <= 0) {
     alert('Please fill in all fields with valid values');
     return;
   }
@@ -566,7 +566,7 @@ function addCustomService() {
     id: 'custom_' + Date.now(),
     name: name,
     description: description,
-    rates: [simpleRate, standardRate, premiumRate],
+    rates: [basicRate, standardRate, premiumRate],
     selectedTier: 0,
     hours: 0,
     quantity: 1,
@@ -588,11 +588,11 @@ function addCustomService() {
 function addCustomProduct() {
   const name = document.getElementById('customProductName').value.trim();
   const description = document.getElementById('customProductDesc').value.trim();
-  const simplePrice = parseFloat(document.getElementById('customProductSimple').value) || 0;
+  const basicPrice = parseFloat(document.getElementById('customProductSimple').value) || 0;
   const standardPrice = parseFloat(document.getElementById('customProductStandard').value) || 0;
   const premiumPrice = parseFloat(document.getElementById('customProductPremium').value) || 0;
 
-  if (!name || !description || simplePrice <= 0 || standardPrice <= 0 || premiumPrice <= 0) {
+  if (!name || !description || basicPrice <= 0 || standardPrice <= 0 || premiumPrice <= 0) {
     alert('Please fill in all fields with valid values');
     return;
   }
@@ -601,7 +601,7 @@ function addCustomProduct() {
     id: 'custom_' + Date.now(),
     name: name,
     description: description,
-    prices: [simplePrice, standardPrice, premiumPrice],
+    prices: [basicPrice, standardPrice, premiumPrice],
     selectedTier: 0,
     quantity: 0,
     isActive: false
