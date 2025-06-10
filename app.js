@@ -272,17 +272,18 @@ function createServiceElement(service, index, isCustom) {
       </div>
       <div class="quantity-controls">
         <label>Hours:</label>
-        <button class="quantity-btn" onclick="updateServiceHours(${index}, -0.5, ${isCustom})">-</button>
+        
+        <button class="quantity-btn" onclick="updateServiceHours(${index}, -0.5, ${isCustom})"><span class="quantity-symbol">-</span></button>
         <input type="number" class="form-control quantity-input" value="${service.hours}" 
                onchange="setServiceHours(${index}, this.value, ${isCustom})" min="0" step="0.5">
-        <button class="quantity-btn" onclick="updateServiceHours(${index}, 0.5, ${isCustom})">+</button>
+        <button class="quantity-btn" onclick="updateServiceHours(${index}, 0.5, ${isCustom})"><span class="quantity-symbol">+</span></button>
       </div>
       <div class="quantity-controls">
         <label>Qty:</label>
-        <button class="quantity-btn" onclick="updateServiceQuantity(${index}, -1, ${isCustom})">-</button>
+        <button class="quantity-btn" onclick="updateServiceQuantity(${index}, -1, ${isCustom})"><span class="quantity-symbol">-</span></button>
         <input type="number" class="form-control quantity-input" value="${service.quantity}" 
                onchange="setServiceQuantity(${index}, this.value, ${isCustom})" min="0">
-        <button class="quantity-btn" onclick="updateServiceQuantity(${index}, 1, ${isCustom})">+</button>
+        <button class="quantity-btn" onclick="updateServiceQuantity(${index}, 1, ${isCustom})"><span class="quantity-symbol">+</span></button>
       </div>
     </div>
   `;
