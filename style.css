@@ -1302,6 +1302,10 @@ section h2 {
   background: var(--color-secondary);
 }
 
+.quantity-symbol {
+  color: rgba(44, 255, 149, 1);
+}
+
 .add-custom-btn {
   background: var(--color-primary);
   color: var(--color-btn-primary-text);
