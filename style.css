@@ -1696,3 +1696,10 @@ input[type="checkbox"]:checked + .checkmark::after {
   src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
     format('woff2');
 }
+
+.quote-number {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
