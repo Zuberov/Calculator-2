@@ -193,6 +193,7 @@ function setupModalListeners() {
   });
 
   document.getElementById('printQuote').addEventListener('click', printQuote);
+  document.getElementById('createPDF').addEventListener('click', createPDF);
 
   // Click outside modal to close
   window.addEventListener('click', (e) => {
@@ -996,4 +997,26 @@ function loadFromStorage() {
   } catch (error) {
     console.error('Error loading saved state:', error);
   }
+}
+
+
+function createPDF() {
+  const quoteContent = document.getElementById('quoteContent').innerHTML;
+  const tempContainer = document.createElement('div');
+  tempContainer.innerHTML = quoteContent;
+
+  const opt = {
+    margin: [15, 10, 15, 10],
+    filename: `quote-${document.getElementById('clientName').value || 'client'}.pdf`,
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2, useCORS: true, letterRendering: true },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  };
+
+  html2pdf().set(opt).from(tempContainer).save().then(() => {
+    tempContainer.remove();
+  }).catch((error) => {
+    console.error('PDF generation failed:', error);
+    alert('Failed to generate PDF. Please try the print option instead.');
+  });
 }
