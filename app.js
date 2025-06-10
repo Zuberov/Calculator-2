@@ -700,6 +700,7 @@ function createQuoteContent() {
   
   let content = `
     <div class="quote-header">
+      const quoteNumber = document.getElementById('quoteNumber').value;
       ${currentState.logoUrl ? `<img src="${currentState.logoUrl}" alt="Logo" class="quote-logo">` : '<div></div>'}
       <div class="quote-contact">
         <strong>Phone:</strong> ${appData.contact.phone}<br>
@@ -709,6 +710,7 @@ function createQuoteContent() {
     </div>
     
     <h1 class="quote-title">Project Quote</h1>
+    ${quoteNumber ? `<div class="quote-number"><strong>Quote Number:</strong> ${quoteNumber}</div>` : ''}
     
     <div class="quote-section">
       <h3>Client Information</h3>
@@ -942,6 +944,7 @@ function saveToStorage() {
     clientEmail: document.getElementById('clientEmail').value,
     clientPhone: document.getElementById('clientPhone').value,
     clientAddress: document.getElementById('clientAddress').value,
+    quoteNumber: document.getElementById('quoteNumber').value,
     quoteGreeting: document.getElementById('quoteGreeting').value,
     projectDuration: document.getElementById('projectDuration').value,
     termsConditions: document.getElementById('termsConditions').value,
