@@ -26,16 +26,16 @@ const appData = {
     {id: "other", name: "Other Services", rates: [69, 137, 235], description: "Additional design and consulting services"}
   ],
   products: [
-    {id: "logo", name: "Logo Design", prices: [1568, 3136, 6860], description: "Professional logo design with multiple concepts and revisions"},
-    {id: "business-card", name: "Business Card Design", prices: [294, 588, 1176], description: "Professional business card design and print preparation"},
-    {id: "brochure", name: "Brochure Design", prices: [1176, 2352, 4900], description: "Multi-page brochure design with professional layout"},
+    {id: "logo", name: "Logo Design", prices: [1200, 2000, 6860], description: "Professional logo design with multiple concepts and revisions"},
+    {id: "business-card", name: "Business Card Design", prices: [30, 50, 100], description: "Professional business card design and print preparation"},
+    {id: "brochure", name: "Brochure Design", prices: [200, 275, 350], description: "Multi-page brochure design with professional layout"},
     {id: "poster", name: "Poster Design", prices: [588, 1176, 2352], description: "Eye-catching poster design for events and marketing"},
-    {id: "folder", name: "Folder Design", prices: [784, 1568, 2940], description: "Professional folder design for corporate presentations"},
+    {id: "folder", name: "Folder Design", prices: [150, 200, 350], description: "Professional folder design for corporate presentations"},
     {id: "flyer", name: "Flyer Design", prices: [392, 784, 1568], description: "Promotional flyer design for marketing campaigns"},
     {id: "stationery", name: "Business Stationery Package", prices: [1568, 3136, 5880], description: "Complete stationery set including letterhead, envelopes, and cards"},
     {id: "social", name: "Social Media Templates (10-set)", prices: [784, 1568, 2940], description: "Set of 10 social media templates for consistent branding"}
   ],
-  tiers: ["Simple", "Standard", "Premium"],
+  tiers: ["Basic", "Standard", "Premium"],
   complexity: {
     standard: {name: "Standard", multiplier: 1.0},
     medium: {name: "Medium Complexity", multiplier: 1.3},
@@ -43,8 +43,8 @@ const appData = {
     "very-complex": {name: "Very Complex", multiplier: 2.2}
   },
   urgency: {
-    standard: {name: "Standard Timeline", multiplier: 1.0},
-    rush: {name: "Rush (1-3 days)", multiplier: 1.5},
+    standard: {name: "Standard Order", multiplier: 1.0},
+    rush: {name: "Rush (3-5 days)", multiplier: 1.5},
     urgent: {name: "Urgent (24-48 hours)", multiplier: 2.0},
     emergency: {name: "Emergency (same day)", multiplier: 3.0}
   }
@@ -552,7 +552,7 @@ function deleteProduct(index, isCustom) {
 function addCustomService() {
   const name = document.getElementById('customServiceName').value.trim();
   const description = document.getElementById('customServiceDesc').value.trim();
-  const simpleRate = parseFloat(document.getElementById('customServiceSimple').value) || 0;
+  const basicRate = parseFloat(document.getElementById('customServiceSimple').value) || 0;
   const standardRate = parseFloat(document.getElementById('customServiceStandard').value) || 0;
   const premiumRate = parseFloat(document.getElementById('customServicePremium').value) || 0;
 
