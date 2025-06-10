@@ -1289,7 +1289,7 @@ section h2 {
   width: 30px;
   height: 30px;
   border: 1px solid var(--color-border);
-  color: var(--color--primary);
+  color: #2cff95;
   background: var(--color-background);
   border-radius: var(--radius-sm);
   cursor: pointer;
