@@ -553,7 +553,7 @@ function deleteProduct(index, isCustom) {
 function addCustomService() {
   const name = document.getElementById('customServiceName').value.trim();
   const description = document.getElementById('customServiceDesc').value.trim();
-  const basicRate = parseFloat(document.getElementById('customServiceSimple').value) || 0;
+  const basicRate = parseFloat(document.getElementById('customServicebasic').value) || 0;
   const standardRate = parseFloat(document.getElementById('customServiceStandard').value) || 0;
   const premiumRate = parseFloat(document.getElementById('customServicePremium').value) || 0;
 
@@ -576,7 +576,7 @@ function addCustomService() {
   // Clear form
   document.getElementById('customServiceName').value = '';
   document.getElementById('customServiceDesc').value = '';
-  document.getElementById('customServiceSimple').value = '';
+  document.getElementById('customServicebasic').value = '';
   document.getElementById('customServiceStandard').value = '';
   document.getElementById('customServicePremium').value = '';
 
@@ -588,7 +588,7 @@ function addCustomService() {
 function addCustomProduct() {
   const name = document.getElementById('customProductName').value.trim();
   const description = document.getElementById('customProductDesc').value.trim();
-  const basicPrice = parseFloat(document.getElementById('customProductSimple').value) || 0;
+  const basicPrice = parseFloat(document.getElementById('customProductbasic').value) || 0;
   const standardPrice = parseFloat(document.getElementById('customProductStandard').value) || 0;
   const premiumPrice = parseFloat(document.getElementById('customProductPremium').value) || 0;
 
@@ -610,7 +610,7 @@ function addCustomProduct() {
   // Clear form
   document.getElementById('customProductName').value = '';
   document.getElementById('customProductDesc').value = '';
-  document.getElementById('customProductSimple').value = '';
+  document.getElementById('customProductbasic').value = '';
   document.getElementById('customProductStandard').value = '';
   document.getElementById('customProductPremium').value = '';
 
